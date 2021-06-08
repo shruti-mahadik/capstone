@@ -1,7 +1,6 @@
-# Capstone project
+# CAPSTONE PROJECT
 
 # Point of Use Temperature and Humidity Monitoring system
-
 A prototype which is independently  powered  and  monitored  real-time  variations  in temperature  and  humidity. These real-time levels of temperature and humidity  wirelessly  send to the end-user and calibrated and presented in graphical format to ensure suitable data provision over the platform and in suitable intervals. 
 
 # Introduction
