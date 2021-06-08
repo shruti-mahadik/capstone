@@ -7,7 +7,7 @@
 	copyright Fanshawe College, 2020
 
 	Description: 	Testing of the DHT22 temperature and humidity sensor readings, and the 
-					ability to send the data wirelessly to a TCP server.	
+			ability to send the data wirelessly to a TCP server.	
 	
 ----------------------------------------------------------------------------------------------*/
 
@@ -30,23 +30,23 @@
 
 // Sensor Data Control
 #define SENSORDATA 		PORTDbits.RD0
-#define SENSORSTATE 	TRISDbits.RD0
+#define SENSORSTATE 		TRISDbits.RD0
 #define INPUT			1
 #define OUTPUT			0
 #define MAXDATA			32		                          // Bits in a long variable
-#define MAXCS			8		                              // Checksum of DHT is a char
-#define LIMIT			104		                            // With 16 MHz Fosc, 104 Tcy = 26 us
+#define MAXCS			8		                          // Checksum of DHT is a char
+#define LIMIT			104		                          // With 16 MHz Fosc, 104 Tcy = 26 us
 
-#define RCFLAG		PIR1bits.RC1IF	                  // High when a byte is ready to be received
+#define RCFLAG			PIR1bits.RC1IF	                	 // High when a byte is ready to be received
 
-#define ESPBUF 		50				                        // Buffer size for received string
+#define ESPBUF 			50				         // Buffer size for received string
 
-const char SSID[] =			"MyESP";
+const char SSID[] =		"MyESP";
 const char PASSWORD[] =		"NotYours";
 const char SERVERIP[] =		"192.168.4.2";
 const char SERVERPORT[] =	"2005";
 
-#define DEG 176	                                    // Degree symbol
+#define DEG 176	                                    			// Degree symbol
 
 // Global Variables --------------------------------------------------------------------------
 
@@ -101,7 +101,7 @@ void portConfig(void)
 
 
 /*** serialCom: ***********************************************************
-Author:		SMAHADIK,JMICHAEL
+Author:		SMAHADIK
 Date:		24 Jan, 2020
 Modified:	None
 Desc:		Configures RS232 Connection to 19200 Baud rate, asynchronous
@@ -126,7 +126,7 @@ void serialCom(void)
 
 
 /*** initializeSystem: ***********************************************************
-Author:		SMAHADIK,JMICHAEL
+Author:		SMAHADIK
 Date:		24 Jan, 2020
 Modified:	None
 Desc:		Initialize PIC, including Fosc, serial connection, and sensor IO.
